@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calvin EMR</title>
+  <style>
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      font-family: Georgia, serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #222;
+      min-height: 100vh;
+    }
+    nav {
+      background: #1a5276;
+      padding: 0.8em 1.2em;
+      margin: 0 -20px;
+      display: flex;
+      align-items: center;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
+    .nav-title {
+      color: #fff;
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-right: auto;
+      text-decoration: none;
+    }
+    nav a {
+      color: #aed6f1;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+    }
+    nav a:hover { color: #fff; text-decoration: underline; }
+    .content { padding: 40px 0 60px; }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 2.5em;
+      color: #1a5276;
+      border-bottom: 2px solid #aed6f1;
+      padding-bottom: 0.3em;
+    }
+    p { margin: 1em 0; }
+    a { color: #1a5276; }
+    .subtitle { color: #666; font-family: Arial, sans-serif; font-size: 0.9rem; margin-top: 0.2em; }
+    footer {
+      margin-top: 4em;
+      font-size: 0.85rem;
+      color: #888;
+      border-top: 2px solid #aed6f1;
+      padding: 1em 0;
+    }
+    footer a { color: #1a5276; }
+    .slideshow {
+      margin-top: 1.5em;
+      background: #f0f4f8;
+      border: 1px solid #aed6f1;
+      border-radius: 6px;
+      padding: 1em;
+      text-align: center;
+    }
+    .slideshow img {
+      width: 100%;
+      max-width: 620px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+    }
+    .slide-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      margin-top: 0.8em;
+    }
+    .slide-controls button {
+      background: #1a5276;
+      color: #fff;
+      border: none;
+      padding: 0.4em 1.1em;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+    .slide-controls button:hover { background: #154360; }
+    .slide-controls button:disabled { background: #aaa; cursor: default; }
+    .slide-counter {
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+      color: #555;
+      min-width: 80px;
+    }
+    .slide-download {
+      margin-top: 0.8em;
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+    .slide-download a { color: #1a5276; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-title" href="#top">Calvin EMR</a>
+    <a href="#vision">Vision</a>
+    <a href="#team">Team</a>
+    <a href="#report">Report</a>
+    <a href="#codebase">Codebase</a>
+    <a href="#presentation">Presentation</a>
+    <a href="https://computing.calvin.edu/" target="_blank">Department of Computer Science</a>
+  </nav>
+
+  <div class="content" id="top">
+    <p class="subtitle">CS396 · Calvin University</p>
+
+    <h2 id="vision">Vision</h2>
+    <p>Nursing students often enter clinical practice with strong theoretical foundations but minimal hands-on experience navigating digital health systems. When these students transition to clinical settings and encounter an Electronic Medical Record (EMR) software, this inexperience can cause inefficiencies and potential errors. Calvin EMR addresses this challenge by creating a realistic training platform specifically designed for Calvin University's Nursing program students.</p>
+    <p>Building upon the foundation established by previous students, our team is expanding the system's capabilities by adding features as requested by the Nursing department, while developing a comprehensive collection of end-to-end tests. This enables students to gain practical experience with patient data management and EMR workflows in a completely risk-free environment.</p>
+    <p>Beyond feature development, we are committed to keeping the codebase clean, testable, scalable, and maintainable. Our ultimate goal is to develop a high-quality educational tool that helps Nursing students learn about digital medical systems — while also establishing a foundation that can be adapted for potential future commercialization.</p>
+
+    <h2 id="team">Team</h2>
+    <p><strong>Alvin Waigwa</strong> — Senior studying Computer Science at Calvin University. Project team (2025 - 2026)</p>
+    <p><strong>Peter Lund</strong> — Senior studying Computer Science and Mathematics at Calvin University. Project team (2025 - 2026)</p>
+    <p><strong>Swayam Shrestha</strong> — Junior studying Computer Science and Business at Calvin University. Project team (2026 - 2027)</p>
+    
+    <h2 id="codebase">Codebase</h2>
+    <p>The complete source code for the Calvin EMR project is available on GitHub.</p>
+    <p><a href="https://github.com/CS396-398-EMR" target="_blank">Calvin EMR on GitHub</a></p>
+    
+    <h2 id="report">Report</h2>
+    <p>The report below is the current version of the status report, including updates made through Milestone 3.</p>
+    <p><a href="../CS396_Milestone_3.pdf" target="_blank">CS396 Report (PDF)</a></p>
+
+
+    <h2 id="presentation">Presentation</h2>
+    <p>Browse through the status report slides below, or download the original file.</p>
+
+    <div class="slideshow">
+      <img id="slide-img" src="slide-01.jpg" alt="Slide 1" />
+      <div class="slide-controls">
+        <button id="prev-btn" onclick="changeSlide(-1)" disabled>&#8592; Prev</button>
+        <span class="slide-counter" id="counter">1 / 10</span>
+        <button id="next-btn" onclick="changeSlide(1)">Next &#8594;</button>
+      </div>
+      <div class="slide-download">
+        <a href="CS_398_presentation.pptx" download>Download original slides (.pptx)</a>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://computing.calvin.edu/">Department of Computer Science — Calvin University</a>
+    </footer>
+  </div>
+
+  <script>
+    const SLIDES = [
+      'slide-01.jpg',
+      'slide-02.jpg',
+      'slide-03.jpg',
+      'slide-04.jpg',
+      'slide-05.jpg',
+      'slide-06.jpg',
+      'slide-07.jpg',
+      'slide-08.jpg',
+      'slide-09.jpg',
+      'slide-10.jpg'
+    ];
+
+    let current = 0;
+
+    function changeSlide(dir) {
+      current += dir;
+      if (current < 0) current = 0;
+      if (current >= SLIDES.length) current = SLIDES.length - 1;
+      document.getElementById('slide-img').src = SLIDES[current];
+      document.getElementById('slide-img').alt = 'Slide ' + (current + 1);
+      document.getElementById('counter').textContent = (current + 1) + ' / ' + SLIDES.length;
+      document.getElementById('prev-btn').disabled = current === 0;
+      document.getElementById('next-btn').disabled = current === SLIDES.length - 1;
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') changeSlide(1);
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+    });
+  </script>
+
+</body>
+</html>
